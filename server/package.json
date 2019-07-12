@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "dev": "nodemon build/index.js",
+    "html": "copyfiles --up 1 src/public/*.html build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "promise-mysql": "^4.0.4"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.1",
+    "nodemon": "^1.19.1"
+  }
+}
