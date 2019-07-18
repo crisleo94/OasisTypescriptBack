@@ -3,19 +3,17 @@ import DataBase from '../database';
 
 class ProductosController {
 
-    public list (req: Request, res: Response) {
+    public list (req: Request, resp: Response) {
         const query = 'SELECT * FROM productos';
         DataBase.ejecutarConsulta(query, [req.body], (err: any, resul: Object[]) => {
             if (err) {
-                res.json({
+                resp.json({
                     ok: false,
                     message: 'La selección no existe'
                 });
             } else {
-                res.json({
-                    ok: true,
-                    productos: resul
-                })
+                console.log(resul);
+                resp.json(resul);
             }
         })
     }
@@ -31,10 +29,7 @@ class ProductosController {
                     message: 'La consulta no es correcta'
                 });
             } else {
-                resp.json({
-                    ok: true,
-                    producto: resul
-                });
+                resp.json(resul);
             }
         });
     }

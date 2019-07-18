@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -w",
+    "build": "tsc",
     "dev": "nodemon build/index.js",
-    "html": "copyfiles --up 1 src/public/*.html build"
+    "start": "node build/index.js",
+    "html": "copyfiles --up 1 src/public/*.html build",
+    "postinstall": "npm run build",
+    "heroku-postbuild": "node build/index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
   },
   "devDependencies": {
     "copyfiles": "^2.1.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.3"
   }
 }

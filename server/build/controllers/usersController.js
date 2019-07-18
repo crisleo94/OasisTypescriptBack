@@ -15,10 +15,8 @@ class UsersController {
                 });
             }
             else {
-                res.json({
-                    ok: true,
-                    users: resul
-                });
+                // Se envia el valor RAW para que se más simple su uso
+                res.json(resul);
             }
         });
     }
@@ -34,10 +32,7 @@ class UsersController {
                 });
             }
             else {
-                resp.json({
-                    ok: true,
-                    user: resul
-                });
+                resp.json(resul);
             }
         });
     }

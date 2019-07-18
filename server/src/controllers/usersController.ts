@@ -14,10 +14,8 @@ class UsersController {
                     message: 'La selección no existe'
                 });
             } else {
-                res.json({
-                    ok: true,
-                    users: resul
-                })
+                // Se envia el valor RAW para que se más simple su uso
+                res.json(resul)
             }
         })
     }
@@ -33,10 +31,7 @@ class UsersController {
                     message: 'La consulta no es correcta'
                 });
             } else {
-                resp.json({
-                    ok: true,
-                    user: resul
-                });
+                resp.json(resul);
             }
         });
     }

@@ -12,10 +12,7 @@ class PedidosController {
                     message: 'La selección no existe'
                 });
             } else {
-                res.json({
-                    ok: true,
-                    users: resul
-                })
+                res.json(resul);
             }
         })
     }
@@ -31,10 +28,7 @@ class PedidosController {
                     message: 'La consulta no es correcta'
                 });
             } else {
-                resp.json({
-                    ok: true,
-                    user: resul
-                });
+                resp.json(resul);
             }
         });
     }

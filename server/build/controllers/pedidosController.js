@@ -15,10 +15,7 @@ class PedidosController {
                 });
             }
             else {
-                res.json({
-                    ok: true,
-                    users: resul
-                });
+                res.json(resul);
             }
         });
     }
@@ -34,10 +31,7 @@ class PedidosController {
                 });
             }
             else {
-                resp.json({
-                    ok: true,
-                    user: resul
-                });
+                resp.json(resul);
             }
         });
     }
