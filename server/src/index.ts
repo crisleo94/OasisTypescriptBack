@@ -36,12 +36,13 @@ class Server {
     start(): void {
         this.app.listen(this.app.get('port'), () => {
             console.log('Server on port ', this.app.get('port'));
+            this.publicFolder();
         });
         
     }
 
     private publicFolder() {
-        const publicPath = path.resolve( __dirname, '../public' );
+        const publicPath = path.resolve( __dirname, '/public' );
 
         this.app.use( express.static(publicPath) );
     }

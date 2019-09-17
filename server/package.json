@@ -7,7 +7,6 @@
     "build": "tsc",
     "dev": "nodemon build/index.js",
     "start": "node build/index.js",
-    "html": "copyfiles --up 1 src/public/*.html build",
     "postinstall": "npm run build",
     "heroku-postbuild": "node build/index.js"
   },
